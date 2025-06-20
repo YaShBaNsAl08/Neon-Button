@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111827;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.neon-button {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  color: #0ff;
+  text-decoration: none;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  animation: pulse 2s infinite;
+}
+
+.neon-button:hover {
+  background: #0ff;
+  color: #0f0f0f;
+  box-shadow: 0 0 20px #0ff, 0 0 60px #0ff, 0 0 100px #0ff;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #0ff, 0 0 60px #0ff, 0 0 100px #0ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+    color: #ffff;
+    font-size: 18px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #555;
+  }
+
+@media (max-width: 500px) {
+  .neon-button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
